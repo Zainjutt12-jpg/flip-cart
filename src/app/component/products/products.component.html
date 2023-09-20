@@ -1,0 +1,38 @@
+<div class="card-top container-fluid">
+    <div class="container d-flex">
+        <div class="item">
+<a><img src="https://rukminim2.flixcart.com/flap/128/128/image/29327f40e9c4d26b.png?q=100" alt="">
+<h6>Electronics</h6></a>
+        </div>
+        <div class="item">
+        <a><img src="https://rukminim2.flixcart.com/flap/128/128/image/29327f40e9c4d26b.png?q=100" alt="">
+        <h6>fashion</h6></a>
+        </div>
+        <div class="item">
+            <a><img src="https://rukminim2.flixcart.com/flap/128/128/image/29327f40e9c4d26b.png?q=100" alt="">
+            <h6>grocery</h6></a>
+
+        </div>
+        <div class="item">
+            <a><img src="https://rukminim2.flixcart.com/flap/128/128/image/29327f40e9c4d26b.png?q=100" alt="">
+            <h6>special</h6></a>
+
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <ng-container *ngFor="let item of productList">
+
+        <div class="card col-md-3">
+            <img src="{{item.image}}" alt="">
+            <h5 style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{item.title}}</h5>
+            <p style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{item.description}}</p>
+            <p><strong>price:</strong>${{item.price}}</p>
+            <button class="btn btn-primary" (click)="addtocart(item)">ADD TO CART</button>
+        </div>
+    </ng-container>
+
+    </div>
+</div>
